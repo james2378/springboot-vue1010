@@ -3,8 +3,8 @@ java毕业设计，共享汽车管理系统
 ### 3000多套系统，需要联系
 抠：3565014707 微：a13424421017
 
-架构特征：
-分层架构
+#### 架构特征：
+#### 分层架构
 Web层：controller 包处理 HTTP 请求（如 CommonController）。
 业务层：service 包定义业务接口（CommonService）和实现（CommonServiceImpl）。
 持久层：dao 包（CommonDao）与 resources/mapper 下的 XML 文件实现 SQL 映射。
@@ -15,8 +15,8 @@ Web层：controller 包处理 HTTP 请求（如 CommonController）。
 前后端分离
 前端代码位于 resources/admin，使用 Vue.js 构建 SPA（单页应用），通过 api.js 调用后端接口。
 后端提供 RESTful API，静态资源通过 static/upload 存储上传文件。
-二、功能模块解析
-1. 核心业务模块（车辆管理系统）
+#### 功能模块解析
+#### 核心业务模块（车辆管理系统）
 车辆信息管理
 
 qichexinxi（汽车信息）：管理车辆基础信息（型号、状态等）。
@@ -29,7 +29,7 @@ shiyongdingdan（使用订单）：跟踪车辆使用记录和订单状态。
 区域管理
 
 toufangdiqu（投放地区）：维护车辆可投放的地理区域。
-2. 用户权限模块
+#### 用户权限模块
 用户管理
 
 users 和 yonghu：管理后台用户账户（增删改查）。
@@ -37,17 +37,17 @@ users 和 yonghu：管理后台用户账户（增删改查）。
 权限控制
 
 通过 InterceptorConfig 配置拦截规则，AuthorizationInterceptor 校验用户登录状态。
-3. 系统配置模块
+#### 系统配置模块
 参数配置
 config 模块（ConfigEntity 和 add-or-update.vue）：管理系统参数（如文件上传路径、第三方 API 密钥）。
-4. 工具与集成模块
+#### 工具与集成模块
 文件上传
 
 上传路径 static/upload，支持图片（如 1577351717989.jpg）存储。
 第三方服务集成
 
 BaiduUtil：集成百度 API（可能用于地图定位、OCR 识别等）。
-三、技术栈推测
+#### 技术栈推测
 后端技术栈
 框架：Spring Boot（SpringbootSchemaApplication 为启动类）
 ORM：MyBatis（CommonDao.xml 为 SQL 映射文件）
